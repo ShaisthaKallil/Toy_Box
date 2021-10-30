@@ -1,0 +1,369 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>Toy Store</title>
+
+<!-- Stylesheet -->
+<link href = "styles/main.css" rel = "stylesheet" type = "text/css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bitter:wght@300&family=Zen+Kaku+Gothic+New:wght@300&display=swap" rel="stylesheet">
+
+<!-- Javascript -->
+<script src = "js/appToy.js"></script>
+
+</head>
+
+	<!-- @motivatecoding -->
+    <!-- Create a small - scale ecommerce toy store - javascript -->
+
+<body>
+
+	<div id = "container">
+
+        <!-- Header -->
+    	<header>
+
+        	<!--<h1> TOY STORE </h1>-->
+					  <img class = "icon" src = "images/toy box.png" alt = "toy box icon"/>
+            <h2><em>Toys forever kids...</em></h2>
+
+        </header>
+
+    	<hr>
+        <ul>
+           <li> DEALS </li>
+					 <li>CLEARANCE </li>
+				</ul>
+
+
+      <div class = "banner">
+            <img class = "poster" src = "images/ban.png" alt = "poster" />
+            <img class = "post" src = "images/check.png" alt = "poster" />
+
+						<!--<h2 class = "shop">
+							Enjoy hand-picked toys of the season.
+						</h2>-->
+
+						<a class="btn" href="#">Shop Now</a>
+			</div>
+
+       <hr class = "dec">
+
+        <!-- Display bill and button-->
+        <p id = "buyPrice"></p>
+
+        <button id = "showResult" class = "buy" onclick = "showResult()"> MY BILL </button>
+
+
+        <!-- List of Products -->
+        <table id = "list">
+            <!-- First Row -->
+            <tr>
+            	<td id = "product_one">
+
+
+                	<img src = "images/boy_car_toy.png" alt = "fire car toy"/>
+									<h4> Fire Car </h4>
+
+                    <!-- Product Price -->
+                    <h4> Price : <span>$ 15.00 </span></h4>
+
+                    <!-- Add / Remove buttons -->
+                    <button value = "0" class = "add" onclick = 'setProd(this)'> ADD </button>
+                    <button value = "0" class = "remove" onclick = 'removeQty(this)'> REMOVE </button>
+
+                    <!-- Quantity box -->
+                    <h3> Quantity : </h3>
+                    <div id = "qty_0" class = "quantity"></div>
+
+                     <!-- Price box -->
+                    <h3> Total Cost : </h3>
+                    <div id = "cost_0" class = "totalCost"></div>
+
+                </td>
+
+                <td id = "product_two">
+
+
+                	<img src = "images/boy_hippo_plush.jpg" alt = "hippo plush toy"/>
+									<h4> Hippo Plush </h4>
+
+                     <!-- Product Price -->
+                    <h4> Price : <span>$ 20.00 </span></h4>
+
+                     <!-- Add / Remove buttons -->
+                    <button value = "1" class = "add" onclick = 'setProd(this)'> ADD </button>
+                    <button value = "1" class = "remove" onclick = 'removeQty(this)'> REMOVE </button>
+
+                    <!-- Quantity box -->
+                    <h3> Quantity : </h3>
+                    <div id = "qty_1" class = "quantity"></div>
+
+                     <!-- Price box -->
+                    <h3> Total Cost : </h3>
+                    <div id = "cost_1" class = "totalCost"></div>
+
+               </td>
+
+               <td id = "product_three">
+
+
+                	<img src = "images/boy_joker_plastic.jpg" alt = "joker figure toy"/>
+									<h4> Joker Figure </h4>
+
+                    <!-- Product Price -->
+                    <h4> Price : <span>$ 18.00</span> </h4>
+
+                    <!-- Add / Remove buttons -->
+                    <button value = "2" class = "add" onclick = 'setProd(this)'> ADD </button>
+                    <button value = "2" class = "remove" onclick = 'removeQty(this)'> REMOVE </button>
+
+                    <!-- Quantity box -->
+                    <h3> Quantity : </h3>
+                    <div id = "qty_2" class = "quantity"></div>
+
+                     <!-- Price box -->
+                    <h3> Total Cost : </h3>
+                    <div id = "cost_2" class = "totalCost"></div>
+
+                </td>
+            </tr><!-- End of First Row -->
+
+
+            <!-- Second Row -->
+            <tr>
+
+            	<td id = "product_four">
+
+
+                	<img src = "images/boy_plastic_taxi.png" alt = "taxi car toy"/>
+									<h4> Taxi Car </h4>
+
+                     <!-- Product Price -->
+                    <h4> Price :<span><$ 15.00</span>  </h4>
+
+                     <!-- Add / Remove buttons -->
+                    <button value = "3" class = "add" onclick = 'setProd(this)'> ADD </button>
+                    <button value = "3" class = "remove" onclick = 'removeQty(this)'> REMOVE </button>
+
+                    <!-- Quantity box -->
+                    <h3> Quantity : </h3>
+                    <div id = "qty_3" class = "quantity"></div>
+
+                     <!-- Price box -->
+                    <h3> Total Cost : </h3>
+                    <div id = "cost_3" class = "totalCost"></div>
+
+                </td>
+
+                <td id = "product_five">
+
+
+                	<img src = "images/superman.png" alt = "superman figure toy"/>
+                  <h4> Superman Figure </h4>
+                     <!-- Product Price -->
+                    <h4> Price :<span>$ 17.00 </span> </h4>
+
+                     <!-- Add / Remove buttons -->
+                    <button value = "4" class = "add" onclick = 'setProd(this)'> ADD </button>
+                    <button value = "4" class = "remove" onclick = 'removeQty(this)'> REMOVE </button>
+
+                    <!-- Quantity box -->
+                    <h3> Quantity : </h3>
+                    <div id = "qty_4" class = "quantity"></div>
+
+                     <!-- Price box -->
+                    <h3> Total Cost : </h3>
+                    <div id = "cost_4" class = "totalCost"></div>
+
+
+                </td>
+
+                <td id = "product_six">
+
+
+                	<img src = "images/reindeer.png" alt = "reindeer plush toy"/>
+									<h4> Reindeer Plush </h4>
+
+                     <!-- Product Price -->
+                    <h4> Price :<span>$ 23.99 </span> </h4>
+
+                     <!-- Add / Remove buttons -->
+                    <button value = "5" class = "add" onclick = 'setProd(this)'> ADD </button>
+                    <button value = "5" class = "remove" onclick = 'removeQty(this)'> REMOVE </button>
+
+                    <!-- Quantity box -->
+                    <h3> Quantity : </h3>
+                    <div id = "qty_5" class = "quantity"></div>
+
+                     <!-- Price box -->
+                    <h3> Total Cost : </h3>
+                    <div id = "cost_5" class = "totalCost"></div>
+
+                </td>
+            </tr><!-- End of Second Row -->
+
+
+            <!-- Third Row -->
+            <tr>
+            	<td id = "product_seven">
+
+
+                	<img src = "images/teds.png" alt = "teddy bear plush"/>
+									<h4> Teddy Bear Plush </h4>
+
+                    <h4> Price :<span>$ 25.49 </span> </h4>
+
+                     <!-- Add / Remove buttons -->
+                    <button value = "6" class = "add" onclick = 'setProd(this)'> ADD </button>
+                    <button value = "6" class = "remove" onclick = 'removeQty(this)'> REMOVE </button>
+
+                    <!-- Quantity box -->
+                    <h3> Quantity : </h3>
+                    <div id = "qty_6" class = "quantity"></div>
+
+                     <!-- Price box -->
+                    <h3> Total Cost : </h3>
+                    <div id = "cost_6" class = "totalCost"></div>
+
+                </td>
+
+                <td id = "product_eight">
+
+
+                	<img src = "images/doll.png" alt = "girl doll"/>
+									<h4> Girl Doll </h4>
+
+                     <!-- Product Price -->
+                    <h4> Price : <span>$ 25.00</span> </h4>
+
+                     <!-- Add / Remove buttons -->
+                    <button value = "7" class = "add" onclick = 'setProd(this)'> ADD </button>
+                    <button value = "7" class = "remove" onclick = 'removeQty(this)'> REMOVE </button>
+
+                    <!-- Quantity box -->
+                    <h3> Quantity : </h3>
+                    <div id = "qty_7" class = "quantity"></div>
+
+                     <!-- Price box -->
+                    <h3> Total Cost : </h3>
+                    <div id = "cost_7" class = "totalCost"></div>
+
+                </td>
+
+                <td id = "product_nine">
+
+
+                	<img src = "images/girl_elephant_plush.jpg" alt = "elephant plush"/>
+									<h4> Elephant Plush </h4>
+
+                     <!-- Product Price -->
+                    <h4> Price :<span>$ 21.00 </span> </h4>
+
+                     <!-- Add / Remove buttons -->
+                    <button value = "8" class = "add" onclick = 'setProd(this)'> ADD </button>
+                    <button value = "8" class = "remove" onclick = 'removeQty(this)'> REMOVE </button>
+
+                    <!-- Quantity box -->
+                    <h3> Quantity : </h3>
+                    <div id = "qty_8" class = "quantity"></div>
+
+                     <!-- Price box -->
+                    <h3> Total Cost : </h3>
+                    <div id = "cost_8" class = "totalCost"></div>
+
+                </td>
+            </tr><!-- End of Third Row -->
+
+
+            <!-- Fourth Row -->
+            <tr>
+            	<td id = "product_ten">
+
+
+                	<img src = "images/girl_merry_go.jpg" alt = "merry go round"/>
+									<h4> Merry Go Round </h4>
+
+                     <!-- Product Price -->
+                    <h4> Price : <span>$ 30.30</span> </h4>
+
+                     <!-- Add / Remove buttons -->
+                    <button value = "9" class = "add" onclick = 'setProd(this)'> ADD </button>
+                    <button value = "9" class = "remove" onclick = 'removeQty(this)'> REMOVE </button>
+
+                    <!-- Quantity box -->
+                    <h3> Quantity : </h3>
+                    <div id = "qty_9" class = "quantity"></div>
+
+                     <!-- Price box -->
+                    <h3> Total Cost : </h3>
+                    <div id = "cost_9" class = "totalCost"></div>
+
+                </td>
+
+                <td id = "product_eleven">
+
+
+                	<img src = "images/ydoll.png" alt = "princess doll toy"/>
+									<h4> Princess Doll </h4>
+
+                     <!-- Product Price -->
+                    <h4> Price :<span> $ 28.16</span> </h4>
+
+                     <!-- Add / Remove buttons -->
+                    <button value = "10" class = "add" onclick = 'setProd(this)'> ADD </button>
+                    <button value = "10" class = "remove" onclick = 'removeQty(this)'> REMOVE </button>
+
+                    <!-- Quantity box -->
+                    <h3> Quantity : </h3>
+                    <div id = "qty_10" class = "quantity"></div>
+
+                     <!-- Price box -->
+                    <h3> Total Cost : </h3>
+                    <div id = "cost_10" class = "totalCost"></div>
+
+                </td>
+
+                <td id = "product_twelve">
+
+
+                	<img src = "images/snow.png" alt = "snowman plush toy"/>
+									<h4> Snowman Plush </h4>
+
+                     <!-- Product Price -->
+                    <h4> Price : <span>$ 12.29 </span></h4>
+
+                     <!-- Add / Remove buttons -->
+                    <button value = "11" class = "add" onclick = 'setProd(this)'> ADD </button>
+                    <button value = "11" class = "remove" onclick = 'removeQty(this)'> REMOVE </button>
+
+                    <!-- Quantity box -->
+                    <h3> Quantity : </h3>
+                    <div id = "qty_11" class = "quantity"></div>
+
+                     <!-- Price box -->
+                    <h3> Total Cost : </h3>
+                    <div id = "cost_11" class = "totalCost"></div>
+
+                </td>
+            </tr><!-- End of Fourth Row -->
+
+
+        </table><!-- End of table -->
+
+
+        <!-- footer -->
+        <footer>
+
+        	<p> All rights reserved, 2020 </p>
+
+        </footer>
+
+    </div><!-- End of container -->
+
+	<hr/>
+</body>
+</html>
